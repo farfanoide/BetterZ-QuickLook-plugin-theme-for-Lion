@@ -13,15 +13,15 @@
 	}
 	body {
 		margin: 0px;
-		font: 11px "Helvetica Neue";
+		font: 11px Myriad Pro, Myriad, Helvetica Neue;
 		color: #AAA;
 	}
 	#headwrap {
 		height: 155px;
 		width: 100%;
-		background:rgba(255,255,255,0.8) url(file://%resource_path%/noise.png) ;
+/*		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfbfc), color-stop(100%,#efeeef)); /* Chrome,Safari4+ *!/*/
 		z-index: 10;
-		margin: 0;
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(2%,#e8e8e8), color-stop(98%,#b8b8b8), color-stop(100%,#727272)); /* Chrome,Safari4+ */		margin: 0;
 		color: gray;
 	}
 	#headwrap.abs {
@@ -39,6 +39,7 @@
 		top: 160px;
 		z-index: 1;
 		text-align: left;
+		font-weight: bold;
 	}
 	#head {
 		background: #rgba(255,255,255,0.9);
@@ -59,22 +60,30 @@
 	h1 {
 		display: inline;	
 	}
+	h1::after {
+	   position: absolute;
+	   top: 0;
+	   left: 0;
+	   content: ¨¨;
+	}
 	#betterzip {
 		color: #FFF;
 		float: right;
 		font-size: 12px;
 		font-weight: bold;
-		margin-top: 5px;
-		margin-right: 20px;
+		margin-top: 15px;
+		margin-right: 40px;
 		height: 67px;
 		width: 67px;
 		background: url(file://%resource_path%/apple-farfanoide.png) no-repeat;
 		background-size: 67px 67px;
+		text-indent: -9999px;
 	}
 	#betterzip span {
 		color: #999;
 		font-size: 9px;
 		font-weight: normal;
+		text-indent: -9999px;
 	}
 	#config {
 		position: absolute;
@@ -108,7 +117,7 @@
 		color: #606060;
 		z-index: 20;
 		border: 1px solid #b4b4b4;
-/* 		box-shadow: 0px 0px 3px rgba(0,0,0,0.2); */
+		text-shadow: 0 1px 0 white;
 		font-weight: bold;
 	}
 	#config #save {
@@ -123,7 +132,7 @@
 		border: 1px solid #b4b4b4;
 		z-index: 20;
 		color: #606060;
-/* 		box-shadow: 0px 0px 3px rgba(0,0,0,0.2); */
+		text-shadow: 0 1px 0 white;
 }
 	#save a{
 		color: #606060;
@@ -144,15 +153,22 @@
 	#header_table {
 		width: 100%;
 	}
+	.r{
+	   font-weight: bold;
+      text-shadow: 0 1px 0 white;
+	}
 	.row0 {
 		color: gray;
-		background-color: rgba(0,0,0,0.1);
-		border-bottom: 1px solid rgba(0,0,0,0.1);
-		border-top: 1px solid rgba(255,255,255,0.2)
-	}
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfbfc), color-stop(100%,#efeeef)); /* Chrome,Safari4+ */
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+		border-top: 1px solid white;
+	} 
 	.row1 {
-		color: white;
-		background-color: rgba(0,0,0,0.3);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfbfc), color-stop(100%,#efeeef)); /* Chrome,Safari4+ */
+		color: gray;
+		text-shadow: 0 1px 0 white;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+      border-top: 1px solid white;	
 	}
 	table, tr {
 		margin: 0;
@@ -169,12 +185,22 @@
 		color: gray;
 		height: 20px;
 		margin-top:2px;
+		text-shadow: 0 1px 0 white;
+		margin-bottom: 1px solid white;
+		margin-top: 1px solid white;
 
 	}
 	#header_table{
 		border-bottom: 1px solid rgba(0,0,0,0.3);
 		box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 	}
+	.inset { 
+	font-size: 28px; 
+	color: rgba(0, 0, 0, 0.3);
+   text-shadow: 0 1px 0px white, 0 -1px 0px #cccccc;
+   font-weight: bold;
+   }
+
 	.n {
 		display: inline;
 		padding: 2px;
@@ -237,7 +263,7 @@
 		<table style="width: 100%; padding-top: 2px; "><tr>
 			<td style="width: 140px"><img src="%icon%" height="128" width="128"></td>
 			<td style="padding: 2px; vertical-align: top;">
-				<h1>%name%</h1>
+				<h1 class="inset">%name%</h1>
 				<table>
 					<tr><td class="r">%Path%:</td><td>%path%</td></tr>
 					<tr><td class="r">%Kind%:</td><td>%kind%</td></tr>
