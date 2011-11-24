@@ -57,43 +57,16 @@
 		-webkit-margin-before:0;
 		-webkit-margin-after:0;
 		width: 600px;
-		height: 30px;
-				text-rendering: geometricPrecision;
-		
+		height: 30px;		
 	}
-	h1::after {
-	   content: attr(data-text);
-	   color: black; 
-	   position: absolute;
-	   top:-3px;
-	   left: 0;
-	   -webkit-mask-image: -webkit-gradient(linear,left top,left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.4)));
-	   vertical-align: top;
-	   margin: 0;
-	   width: 700px;
-	   max-height: 30px;
-
-	}
-	
 	.inset { 
 	font-size: 28px; 
-	color: rgba(255, 255, 255, 0.4);
-	text-shadow: 0 1px 1px white, 0 -1px 1px gray;
+   color:rgba(221, 221, 221, 0.4) ;
+   text-shadow: 1px 4px 6px #dddddd, 0 0 0 rgba(0,0,0,0.8), 1px 4px 6px #dddddd,0 1px 0 white;
 	font-weight: bold;
 	}
-	
 	#betterzip {
-/*		color: #FFF;
-		float: right;
-		font-size: 12px;
-		font-weight: bold;
-		margin-top: 15px;
-		margin-right: 40px;
-		height: 67px;
-		width: 67px;
-		background: url(apple-farfanoide.png) no-repeat;
-		background-size: 67px 67px;*/
-		text-indent: -9999px;
+	   float: right;
 	}
 	#betterzip span {
 		color: #999;
@@ -104,7 +77,6 @@
 		position: absolute;
 		padding: 5px;
 		top: 140px; right: 10px;
-		/* width: 152px;*/
 		z-index: 10;
 		margin-top: -30px;
 		clear: both;
@@ -181,6 +153,7 @@
 		width:100%;
 		margin: 0 auto;
 		clear: both;
+		vertical-align: middle;
 	}
 	#header_table {
 		width: 100%;
